@@ -504,77 +504,8 @@
           "slug" : "out0"
         } ]
       }
-    },
-    "prophecy__temp_testing1_pre_dynamic_select_city_data_0" : {
-      "id" : "prophecy__temp_testing1_pre_dynamic_select_city_data_0",
-      "component" : "Dataset",
-      "metadata" : {
-        "label" : "forecast_hourly_metric_0",
-        "phase" : 0
-      },
-      "properties" : {
-        "table" : {
-          "name" : "prophecy__temp_testing1_pre_dynamic_select_city_data_0",
-          "sourceType" : "Source",
-          "sourceName" : "prophecy__temp_testing1_source",
-          "alias" : ""
-        }
-      },
-      "visualMetaInfo" : {
-        "isTemporaryTable" : true
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "input_port_0_1",
-          "slug" : "input_port_0_1"
-        } ],
-        "outputs" : [ {
-          "id" : "output_port_0_1",
-          "slug" : "output_port_0_1"
-        } ],
-        "isCustomOutputSchema" : false
-      }
-    },
-    "dFRP_pZFC6rfJuSN4HiXF$$W185a6iM8gpH2lc-_RQ6E" : {
-      "id" : "dFRP_pZFC6rfJuSN4HiXF$$W185a6iM8gpH2lc-_RQ6E",
-      "component" : "Model",
-      "metadata" : {
-        "label" : "model_testing1_dynamic_select_city_data",
-        "phase" : 0
-      },
-      "properties" : {
-        "modelName" : "model_testing1_dynamic_select_city_data"
-      },
-      "visualMetaInfo" : {
-        "visualProcessIds" : [ "prophecy__temp_testing1_post_dynamic_select_city_data_0", "dFRP_pZFC6rfJuSN4HiXF$$W185a6iM8gpH2lc-_RQ6E", "prophecy__temp_testing1_pre_dynamic_select_city_data_0" ],
-        "type" : "table",
-        "isTemporaryTable" : true
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "model_testing1_dynamic_select_city_data_in_1",
-          "slug" : "in_1"
-        } ],
-        "outputs" : [ {
-          "id" : "model_testing1_dynamic_select_city_data_out_1",
-          "slug" : "out_1"
-        } ],
-        "isCustomOutputSchema" : false
-      }
     }
   },
-  "connections" : [ {
-    "id" : "01G84vr0If2xVb16xlwOG",
-    "source" : "j_hQy49q5bqWsVvViLPMf",
-    "sourcePort" : "7601381a-4c70-42ab-9c70-b367d0082291",
-    "target" : "prophecy__temp_testing1_pre_dynamic_select_city_data_0",
-    "targetPort" : "input_port_0_1"
-  }, {
-    "id" : "conn_prophecy__temp_testing1_pre_dynamic_select_city_data_0_dFRP_pZFC6rfJuSN4HiXF$$W185a6iM8gpH2lc-_RQ6E_w4kmSTU4Jb1QVS5FqcUf3$$W8RU0noNd1VSrywvQaBIG",
-    "source" : "prophecy__temp_testing1_pre_dynamic_select_city_data_0",
-    "sourcePort" : "output_port_0_1",
-    "target" : "dFRP_pZFC6rfJuSN4HiXF$$W185a6iM8gpH2lc-_RQ6E",
-    "targetPort" : "model_testing1_dynamic_select_city_data_in_1"
-  } ],
+  "connections" : [ ],
   "component" : "Pipeline"
 }
