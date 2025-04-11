@@ -1,0 +1,511 @@
+{
+  "id" : "testing1",
+  "metainfo" : {
+    "label" : "testing1",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    }
+  },
+  "processes" : {
+    "j_hQy49q5bqWsVvViLPMf" : {
+      "id" : "j_hQy49q5bqWsVvViLPMf",
+      "component" : "OrchestrationSource",
+      "kind" : "DatabricksSource",
+      "metadata" : {
+        "label" : "forecast_hourly_metric_0",
+        "x" : -660,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "databricks",
+          "properties" : {
+            "authType" : "pat",
+            "id" : "dbxsql"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "databricks",
+          "properties" : {
+            "additionalProperties" : {
+              "copilot" : {
+                "datasetDescriptionStatus" : "fromCopilot"
+              }
+            },
+            "description" : "Comprehensive weather data capturing various atmospheric conditions, aiding in weather analysis and forecasting.",
+            "schema" : {
+              "fields" : [ {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "Name of the city",
+                "name" : "city_name"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "Code representing the country of the city",
+                "name" : "country_code"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Geographical latitude of the city",
+                "name" : "latitude"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "The longitudinal coordinate of the city",
+                "name" : "longitude"
+              }, {
+                "dataType" : {
+                  "type" : "timestamp"
+                },
+                "description" : "The local date and time when the weather data is valid",
+                "name" : "datetime_valid_local"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "The offset from GMT for the local time zone",
+                "name" : "gmt_offset"
+              }, {
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "Height of the cloud base above ground level in meters",
+                "name" : "cloud_base_height"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Total percentage of cloud cover in the sky",
+                "name" : "cloud_cover_perc_total"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Relative humidity percentage in the air",
+                "name" : "humidity_relative"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "UV index indicating the strength of ultraviolet radiation",
+                "name" : "index_uv"
+              }, {
+                "dataType" : {
+                  "type" : "bool"
+                },
+                "description" : "Indicates whether ice is present in the weather conditions",
+                "name" : "has_ice"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Liquid equivalent of ice measured in the weather conditions",
+                "name" : "ice_lwe"
+              }, {
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "Probability of ice occurrence in the weather conditions",
+                "name" : "ice_probability"
+              }, {
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "Total minutes of sunshine expected",
+                "name" : "minutes_of_sun"
+              }, {
+                "dataType" : {
+                  "type" : "bool"
+                },
+                "description" : "Indicates whether precipitation is expected",
+                "name" : "has_precipitation"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Liquid equivalent of precipitation measured",
+                "name" : "precipitation_lwe"
+              }, {
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "Probability of precipitation occurring",
+                "name" : "precipitation_probability"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "Description of the type of precipitation expected",
+                "name" : "precipitation_type_desc"
+              }, {
+                "dataType" : {
+                  "type" : "bool"
+                },
+                "description" : "Indicates whether it is currently raining",
+                "name" : "has_rain"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Liquid equivalent of rain measured",
+                "name" : "rain_lwe"
+              }, {
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "Probability of rain occurring",
+                "name" : "rain_probability"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Ratio of liquid equivalent of snow as reported by AccuWeather",
+                "name" : "snow_liquid_ratio_accuweather"
+              }, {
+                "dataType" : {
+                  "type" : "bool"
+                },
+                "description" : "Indicates whether snow is present",
+                "name" : "has_snow"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Amount of snow measured",
+                "name" : "snow"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Liquid equivalent of snow measured in the area",
+                "name" : "snow_lwe"
+              }, {
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "Probability of snow occurring in the forecast",
+                "name" : "snow_probability"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Amount of solar energy received in the area",
+                "name" : "solar_irradiance"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Current temperature in the specified location",
+                "name" : "temperature"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Dew point temperature indicating moisture in the air",
+                "name" : "temperature_dew_point"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Apparent temperature considering humidity and temperature effects",
+                "name" : "temperature_heat_index"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "The perceived temperature experienced by individuals",
+                "name" : "temperature_realfeel"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "The perceived temperature in shaded areas",
+                "name" : "temperature_realfeel_shade"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "The temperature adjusted for wind chill effects",
+                "name" : "temperature_wind_chill"
+              }, {
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "Probability of a thunderstorm occurring",
+                "name" : "thunderstorm_probability"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Distance at which objects can be clearly seen",
+                "name" : "visibility"
+              }, {
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "Code representing the current weather conditions",
+                "name" : "weather_code"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Direction from which the wind is blowing",
+                "name" : "wind_direction"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Maximum wind gust speed recorded",
+                "name" : "wind_gust"
+              }, {
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Average speed of the wind",
+                "name" : "wind_speed"
+              } ],
+              "providerType" : "Arrow"
+            }
+          }
+        },
+        "properties" : {
+          "tableFullName" : {
+            "database" : "samples",
+            "name" : "forecast_hourly_metric",
+            "schema" : "accuweather"
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "7601381a-4c70-42ab-9c70-b367d0082291",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "city_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "latitude",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "longitude",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "datetime_valid_local",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "gmt_offset",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "cloud_base_height",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "cloud_cover_perc_total",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "humidity_relative",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "index_uv",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "has_ice",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "ice_lwe",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "ice_probability",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "minutes_of_sun",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "has_precipitation",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "precipitation_lwe",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "precipitation_probability",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "precipitation_type_desc",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "has_rain",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "rain_lwe",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "rain_probability",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "snow_liquid_ratio_accuweather",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "has_snow",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "snow",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "snow_lwe",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "snow_probability",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "solar_irradiance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature_dew_point",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature_heat_index",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature_realfeel",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature_realfeel_shade",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature_wind_chill",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "thunderstorm_probability",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "visibility",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "weather_code",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "wind_direction",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "wind_gust",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "wind_speed",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}
