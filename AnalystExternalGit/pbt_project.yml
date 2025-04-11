@@ -1,6 +1,6 @@
 name: AnalystExternalGit
 description: ''
-version: 0.0.1
+version: '3'
 author: admin@prophecy.io
 language: sql
 buildSystem: ''
