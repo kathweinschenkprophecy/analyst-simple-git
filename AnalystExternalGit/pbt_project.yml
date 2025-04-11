@@ -46,6 +46,8 @@ sqlOrchestratorPipelines:
     description: null
     author: admin@prophecy.io
     files:
+    - models/testing1/schema.yml
+    - models/testing1/model_testing1_dynamic_select_city_data.sql
     - .prophecy/ide/pipelines/testing1.json
     - pipelines/testing1.py
     createdAt: '2025-04-11 13:42:10'

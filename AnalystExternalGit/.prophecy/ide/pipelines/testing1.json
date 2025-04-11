@@ -504,8 +504,302 @@
           "slug" : "out0"
         } ]
       }
+    },
+    "dFRP_pZFC6rfJuSN4HiXF$$W185a6iM8gpH2lc-_RQ6E" : {
+      "id" : "dFRP_pZFC6rfJuSN4HiXF$$W185a6iM8gpH2lc-_RQ6E",
+      "component" : "DynamicSelect",
+      "metadata" : {
+        "label" : "dynamic_select_city_data",
+        "x" : -440,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "targetTypes" : "[\"String\"]",
+        "relation" : "forecast_hourly_metric_0",
+        "structTypeChecked" : false,
+        "_oldMacroProperties" : {
+          "macroName" : "DynamicSelect",
+          "projectName" : "DatabricksSqlBasics",
+          "parameters" : [ {
+            "name" : "relation",
+            "value" : "forecast_hourly_metric_0"
+          }, {
+            "name" : "schema",
+            "value" : "[{\"name\": \"city_name\", \"dataType\": \"String\"}, {\"name\": \"country_code\", \"dataType\": \"String\"}, {\"name\": \"latitude\", \"dataType\": \"Double\"}, {\"name\": \"longitude\", \"dataType\": \"Double\"}, {\"name\": \"datetime_valid_local\", \"dataType\": \"Timestamp\"}, {\"name\": \"gmt_offset\", \"dataType\": \"Double\"}, {\"name\": \"cloud_base_height\", \"dataType\": \"Integer\"}, {\"name\": \"cloud_cover_perc_total\", \"dataType\": \"Double\"}, {\"name\": \"humidity_relative\", \"dataType\": \"Double\"}, {\"name\": \"index_uv\", \"dataType\": \"Double\"}, {\"name\": \"has_ice\", \"dataType\": \"Boolean\"}, {\"name\": \"ice_lwe\", \"dataType\": \"Double\"}, {\"name\": \"ice_probability\", \"dataType\": \"Integer\"}, {\"name\": \"minutes_of_sun\", \"dataType\": \"Integer\"}, {\"name\": \"has_precipitation\", \"dataType\": \"Boolean\"}, {\"name\": \"precipitation_lwe\", \"dataType\": \"Double\"}, {\"name\": \"precipitation_probability\", \"dataType\": \"Integer\"}, {\"name\": \"precipitation_type_desc\", \"dataType\": \"String\"}, {\"name\": \"has_rain\", \"dataType\": \"Boolean\"}, {\"name\": \"rain_lwe\", \"dataType\": \"Double\"}, {\"name\": \"rain_probability\", \"dataType\": \"Integer\"}, {\"name\": \"snow_liquid_ratio_accuweather\", \"dataType\": \"Double\"}, {\"name\": \"has_snow\", \"dataType\": \"Boolean\"}, {\"name\": \"snow\", \"dataType\": \"Double\"}, {\"name\": \"snow_lwe\", \"dataType\": \"Double\"}, {\"name\": \"snow_probability\", \"dataType\": \"Integer\"}, {\"name\": \"solar_irradiance\", \"dataType\": \"Double\"}, {\"name\": \"temperature\", \"dataType\": \"Double\"}, {\"name\": \"temperature_dew_point\", \"dataType\": \"Double\"}, {\"name\": \"temperature_heat_index\", \"dataType\": \"Double\"}, {\"name\": \"temperature_realfeel\", \"dataType\": \"Double\"}, {\"name\": \"temperature_realfeel_shade\", \"dataType\": \"Double\"}, {\"name\": \"temperature_wind_chill\", \"dataType\": \"Double\"}, {\"name\": \"thunderstorm_probability\", \"dataType\": \"Integer\"}, {\"name\": \"visibility\", \"dataType\": \"Double\"}, {\"name\": \"weather_code\", \"dataType\": \"Integer\"}, {\"name\": \"wind_direction\", \"dataType\": \"Double\"}, {\"name\": \"wind_gust\", \"dataType\": \"Double\"}, {\"name\": \"wind_speed\", \"dataType\": \"Double\"}]"
+          }, {
+            "name" : "targetTypes",
+            "value" : "[\"String\"]"
+          }, {
+            "name" : "customExpression",
+            "value" : "''"
+          }, {
+            "name" : "selectUsing",
+            "value" : "SELECT_FIELD_TYPES"
+          } ]
+        },
+        "dateTypeChecked" : false,
+        "binaryTypeChecked" : false,
+        "strTypeChecked" : true,
+        "floatTypeChecked" : false,
+        "timestampTypeChecked" : false,
+        "boolTypeChecked" : false,
+        "schema" : "[{\"name\": \"city_name\", \"dataType\": \"String\"}, {\"name\": \"country_code\", \"dataType\": \"String\"}, {\"name\": \"latitude\", \"dataType\": \"Double\"}, {\"name\": \"longitude\", \"dataType\": \"Double\"}, {\"name\": \"datetime_valid_local\", \"dataType\": \"Timestamp\"}, {\"name\": \"gmt_offset\", \"dataType\": \"Double\"}, {\"name\": \"cloud_base_height\", \"dataType\": \"Integer\"}, {\"name\": \"cloud_cover_perc_total\", \"dataType\": \"Double\"}, {\"name\": \"humidity_relative\", \"dataType\": \"Double\"}, {\"name\": \"index_uv\", \"dataType\": \"Double\"}, {\"name\": \"has_ice\", \"dataType\": \"Boolean\"}, {\"name\": \"ice_lwe\", \"dataType\": \"Double\"}, {\"name\": \"ice_probability\", \"dataType\": \"Integer\"}, {\"name\": \"minutes_of_sun\", \"dataType\": \"Integer\"}, {\"name\": \"has_precipitation\", \"dataType\": \"Boolean\"}, {\"name\": \"precipitation_lwe\", \"dataType\": \"Double\"}, {\"name\": \"precipitation_probability\", \"dataType\": \"Integer\"}, {\"name\": \"precipitation_type_desc\", \"dataType\": \"String\"}, {\"name\": \"has_rain\", \"dataType\": \"Boolean\"}, {\"name\": \"rain_lwe\", \"dataType\": \"Double\"}, {\"name\": \"rain_probability\", \"dataType\": \"Integer\"}, {\"name\": \"snow_liquid_ratio_accuweather\", \"dataType\": \"Double\"}, {\"name\": \"has_snow\", \"dataType\": \"Boolean\"}, {\"name\": \"snow\", \"dataType\": \"Double\"}, {\"name\": \"snow_lwe\", \"dataType\": \"Double\"}, {\"name\": \"snow_probability\", \"dataType\": \"Integer\"}, {\"name\": \"solar_irradiance\", \"dataType\": \"Double\"}, {\"name\": \"temperature\", \"dataType\": \"Double\"}, {\"name\": \"temperature_dew_point\", \"dataType\": \"Double\"}, {\"name\": \"temperature_heat_index\", \"dataType\": \"Double\"}, {\"name\": \"temperature_realfeel\", \"dataType\": \"Double\"}, {\"name\": \"temperature_realfeel_shade\", \"dataType\": \"Double\"}, {\"name\": \"temperature_wind_chill\", \"dataType\": \"Double\"}, {\"name\": \"thunderstorm_probability\", \"dataType\": \"Integer\"}, {\"name\": \"visibility\", \"dataType\": \"Double\"}, {\"name\": \"weather_code\", \"dataType\": \"Integer\"}, {\"name\": \"wind_direction\", \"dataType\": \"Double\"}, {\"name\": \"wind_gust\", \"dataType\": \"Double\"}, {\"name\": \"wind_speed\", \"dataType\": \"Double\"}]",
+        "customExpression" : "''",
+        "longTypeChecked" : false,
+        "doubleTypeChecked" : false,
+        "intTypeChecked" : false,
+        "byteTypeChecked" : false,
+        "decimalTypeChecked" : false,
+        "selectUsing" : "SELECT_FIELD_TYPES",
+        "shortTypeChecked" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "w4kmSTU4Jb1QVS5FqcUf3$$W8RU0noNd1VSrywvQaBIG",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "city_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "latitude",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "longitude",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "datetime_valid_local",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "gmt_offset",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "cloud_base_height",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "cloud_cover_perc_total",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "humidity_relative",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "index_uv",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "has_ice",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "ice_lwe",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "ice_probability",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "minutes_of_sun",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "has_precipitation",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "precipitation_lwe",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "precipitation_probability",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "precipitation_type_desc",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "has_rain",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "rain_lwe",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "rain_probability",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "snow_liquid_ratio_accuweather",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "has_snow",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "snow",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "snow_lwe",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "snow_probability",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "solar_irradiance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature_dew_point",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature_heat_index",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature_realfeel",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature_realfeel_shade",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "temperature_wind_chill",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "thunderstorm_probability",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "visibility",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "weather_code",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "wind_direction",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "wind_gust",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "wind_speed",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "WNgNq9Aisb1ewx45ZF7SR$$tmqr5oJaVnpMbF0-w_yVm",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "precipitation_type_desc",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "componentInfo" : {
+        "gemId" : "DynamicSelect_DatabricksSqlBasics",
+        "name" : "DynamicSelect",
+        "projectName" : "DatabricksSqlBasics",
+        "sourceProjectName" : "DatabricksSqlBasics",
+        "sourceProjectVersion" : "0.0.3.dev1"
+      }
     }
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "01G84vr0If2xVb16xlwOG",
+    "source" : "j_hQy49q5bqWsVvViLPMf",
+    "sourcePort" : "7601381a-4c70-42ab-9c70-b367d0082291",
+    "target" : "dFRP_pZFC6rfJuSN4HiXF$$W185a6iM8gpH2lc-_RQ6E",
+    "targetPort" : "w4kmSTU4Jb1QVS5FqcUf3$$W8RU0noNd1VSrywvQaBIG"
+  } ],
   "component" : "Pipeline"
 }

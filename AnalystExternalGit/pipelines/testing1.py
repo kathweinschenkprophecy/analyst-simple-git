@@ -164,3 +164,20 @@ with DAG(Schedule = Schedule):
         ), 
         tableFullName = {"database" : "samples", "name" : "forecast_hourly_metric", "schema" : "accuweather"}
     )
+    forecast_hourly_metric_0 = Task(
+        task_id = "forecast_hourly_metric_0", 
+        component = "Dataset", 
+        table = {
+          "name": "prophecy__temp_testing1_pre_dynamic_select_city_data_0", 
+          "sourceType": "Source", 
+          "sourceName": "prophecy__temp_testing1_source", 
+          "alias": ""
+        }
+    )
+    model_testing1_dynamic_select_city_data = Task(
+        task_id = "model_testing1_dynamic_select_city_data", 
+        component = "Model", 
+        modelName = "model_testing1_dynamic_select_city_data"
+    )
+    forecast_hourly_metric_0.out0 >> forecast_hourly_metric_0.input_port_0_1
+    forecast_hourly_metric_0.output_port_0_1 >> model_testing1_dynamic_select_city_data.in_1
